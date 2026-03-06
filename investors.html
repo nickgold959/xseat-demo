@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>XSEAT — Investor Overview | Texas PRIME</title>
+<meta content="Texas PRIME quantitative lock-up. $375M–$405M annual revenue model. 390+ venues. 13.5M addressable fans. Zero new infrastructure." name="description"/>
+<meta content="XSEAT — Investor Overview" property="og:title"/>
+<meta content="#050507" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+/* ── INVESTORS PAGE OVERRIDES ── */
+:root { --inv-gold: #d4af37; --inv-red: #bf0a30; }
+
+.inv-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  background: rgba(3,3,5,.97);
+  border-bottom: 1px solid rgba(212,175,55,.15);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(20px, 4vw, 60px);
+  height: 64px;
+}
+.inv-nav-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.inv-nav-logo { height: 36px; width: auto; border-radius: 2px; }
+.inv-nav-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 11px; letter-spacing: .18em;
+  color: rgba(212,175,55,.75); text-transform: uppercase;
+}
+.inv-nav-back {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600; font-size: 13px; letter-spacing: .06em;
+  color: rgba(255,255,255,.55); text-decoration: none;
+  transition: color .2s;
+}
+.inv-nav-back:hover { color: rgba(255,255,255,.9); }
+.inv-nav-back::before { content: '←'; font-size: 14px; }
+
+/* ── HERO ── */
+.inv-hero {
+  position: relative; padding: clamp(120px, 14vw, 180px) clamp(20px, 6vw, 100px) clamp(80px, 10vw, 120px);
+  min-height: 70vh; display: flex; align-items: center;
+  background: linear-gradient(135deg, #020204 0%, #060408 100%);
+  overflow: hidden;
+}
+.inv-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url('assets/images/numbers_inline.jpg');
+  background-size: cover; background-position: center 30%;
+  opacity: .12; filter: brightness(.7) contrast(1.2);
+}
+.inv-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(3,3,5,.7) 0%, rgba(3,3,5,.35) 40%, rgba(3,3,5,.85) 100%),
+              radial-gradient(ellipse 60% 50% at 50% 40%, rgba(191,10,48,.08) 0%, transparent 65%);
+}
+.inv-hero-in { position: relative; z-index: 2; max-width: 880px; }
+.inv-hero-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .22em;
+  color: rgba(212,175,55,.8); text-transform: uppercase; margin-bottom: 20px;
+}
+.inv-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 8vw, 110px); line-height: .95;
+  letter-spacing: -1px; color: #fff; margin: 0 0 28px;
+}
+.inv-hero h1 span { color: var(--inv-gold); }
+.inv-hero-sub {
+  font-family: 'Barlow', sans-serif; font-weight: 300;
+  font-size: clamp(16px, 2vw, 20px); line-height: 1.65;
+  color: rgba(255,255,255,.65); max-width: 640px; margin-bottom: 44px;
+}
+.inv-rule { width: 48px; height: 3px; background: var(--inv-gold); margin: 0 0 32px; }
+
+/* ── KEY METRICS STRIP ── */
+.inv-metrics {
+  background: rgba(12,12,16,.98);
+  border-top: 1px solid rgba(212,175,55,.2);
+  border-bottom: 1px solid rgba(212,175,55,.1);
+  padding: 0;
+}
+.inv-metrics-inner {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px; margin: 0 auto;
+}
+.inv-metric {
+  padding: clamp(28px, 4vw, 48px) clamp(24px, 3vw, 40px);
+  border-right: 1px solid rgba(255,255,255,.06);
+  text-align: center;
+}
+.inv-metric:last-child { border-right: none; }
+.inv-metric-n {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(44px, 6vw, 72px); line-height: 1;
+  color: var(--inv-gold); display: block; margin-bottom: 8px;
+}
+.inv-metric-l {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: .08em;
+  color: rgba(255,255,255,.5); text-transform: uppercase;
+}
+
+/* ── SECTION BASE ── */
+.inv-section {
+  padding: clamp(72px, 10vw, 120px) clamp(20px, 6vw, 100px);
+  max-width: 1200px; margin: 0 auto;
+}
+.inv-section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .2em;
+  color: rgba(212,175,55,.7); text-transform: uppercase; margin-bottom: 16px;
+}
+.inv-section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 5vw, 64px); line-height: .95;
+  letter-spacing: -.5px; color: #fff; margin: 0 0 16px;
+}
+.inv-section h2 span { color: var(--inv-gold); }
+.inv-section-lede {
+  font-family: 'Barlow', sans-serif; font-weight: 300;
+  font-size: clamp(15px, 1.8vw, 18px); line-height: 1.7;
+  color: rgba(255,255,255,.6); max-width: 720px; margin-bottom: 48px;
+}
+
+/* ── THESIS GRID ── */
+.inv-thesis {
+  background: rgba(8,8,12,1);
+  border-top: 1px solid rgba(212,175,55,.1);
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.inv-thesis-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px; background: rgba(255,255,255,.05);
+}
+.inv-thesis-card {
+  background: rgba(8,8,12,1);
+  padding: clamp(28px, 3.5vw, 44px);
+  position: relative; transition: background .25s;
+}
+.inv-thesis-card:hover { background: rgba(14,14,20,1); }
+.inv-thesis-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--inv-gold); opacity: 0; transition: opacity .25s;
+}
+.inv-thesis-card:hover::before { opacity: 1; }
+.inv-thesis-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px; line-height: 1; color: rgba(212,175,55,.18);
+  display: block; margin-bottom: 12px;
+}
+.inv-thesis-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px; font-weight: 700; letter-spacing: .06em;
+  color: #fff; text-transform: uppercase; margin-bottom: 12px;
+}
+.inv-thesis-body {
+  font-family: 'Barlow', sans-serif; font-weight: 300;
+  font-size: 14px; line-height: 1.7; color: rgba(255,255,255,.5);
+}
+
+/* ── TEXAS METRICS BLOCK ── */
+.inv-texas-bg {
+  position: relative;
+  background: linear-gradient(180deg, #030305 0%, #08080e 100%);
+  overflow: hidden;
+}
+.inv-texas-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url('assets/images/stadium_aerial_divider.jpg');
+  background-size: cover; background-position: center;
+  opacity: .10;
+}
+.inv-texas-quote {
+  font-family: 'Barlow', sans-serif; font-style: italic;
+  font-size: clamp(14px, 1.6vw, 17px); line-height: 1.7;
+  color: rgba(255,255,255,.45); border-left: 2px solid var(--inv-gold);
+  padding: 16px 0 16px 24px; margin: 0 0 40px;
+  max-width: 680px;
+}
+
+.inv-tm-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px; margin-top: 40px;
+}
+.inv-tm-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 4px;
+  padding: clamp(20px, 2.5vw, 32px);
+  transition: border-color .2s;
+}
+.inv-tm-card:hover { border-color: rgba(212,175,55,.25); }
+.inv-tm-n {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 4.5vw, 56px); line-height: 1;
+  color: var(--inv-gold); margin-bottom: 8px;
+}
+.inv-tm-l {
+  font-family: 'Barlow', sans-serif; font-size: 13px;
+  line-height: 1.55; color: rgba(255,255,255,.45);
+}
+
+/* ── NUMBERS GRID ── */
+.inv-numbers-bg {
+  position: relative;
+  background: #020204;
+  border-top: 1px solid rgba(212,175,55,.12);
+}
+.inv-numbers-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url('assets/images/numbers_inline.jpg');
+  background-size: cover; background-position: center 40%;
+  opacity: .08;
+}
+.inv-num-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px; background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.06);
+  margin-top: 40px;
+}
+.inv-ng {
+  background: rgba(4,4,8,1);
+  padding: clamp(24px, 3vw, 36px);
+  transition: background .2s;
+}
+.inv-ng:hover { background: rgba(10,10,16,1); }
+.inv-ng-n {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4vw, 52px); line-height: 1;
+  color: #fff; margin-bottom: 8px;
+}
+.inv-ng-l {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: .04em;
+  color: rgba(255,255,255,.55); margin-bottom: 8px;
+}
+.inv-ng-note {
+  font-family: 'Barlow', sans-serif; font-size: 12px;
+  color: rgba(255,255,255,.28); line-height: 1.5;
+}
+
+/* ── SCENARIOS ── */
+.inv-scenarios {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px;
+}
+.inv-scenario {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(212,175,55,.15);
+  border-radius: 4px;
+  padding: clamp(28px, 3vw, 40px);
+  text-align: center;
+}
+.inv-scenario-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .18em;
+  color: rgba(212,175,55,.65); text-transform: uppercase; margin-bottom: 12px;
+}
+.inv-scenario-rev {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 7vw, 88px); line-height: 1;
+  color: var(--inv-gold); margin-bottom: 10px;
+}
+.inv-scenario-sub {
+  font-family: 'Barlow', sans-serif; font-weight: 300;
+  font-size: 13px; line-height: 1.6; color: rgba(255,255,255,.4);
+}
+
+/* ── CTA STRIP ── */
+.inv-cta {
+  background: rgba(191,10,48,.06);
+  border-top: 1px solid rgba(191,10,48,.2);
+  border-bottom: 1px solid rgba(191,10,48,.1);
+  padding: clamp(56px, 8vw, 96px) clamp(20px, 6vw, 100px);
+  text-align: center;
+}
+.inv-cta h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 5vw, 64px); color: #fff;
+  letter-spacing: -.5px; margin: 0 0 16px;
+}
+.inv-cta h2 span { color: var(--inv-gold); }
+.inv-cta p {
+  font-family: 'Barlow', sans-serif; font-weight: 300;
+  font-size: clamp(15px, 1.8vw, 18px); color: rgba(255,255,255,.55);
+  max-width: 560px; margin: 0 auto 40px; line-height: 1.65;
+}
+.inv-cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.inv-cta-email {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: .08em;
+  color: var(--inv-gold); text-decoration: none;
+  border: 1px solid rgba(212,175,55,.4);
+  padding: 14px 28px; border-radius: 3px;
+  transition: background .2s, border-color .2s;
+}
+.inv-cta-email:hover {
+  background: rgba(212,175,55,.08);
+  border-color: rgba(212,175,55,.7);
+}
+
+/* ── FOOTER ── */
+.inv-footer {
+  background: #020204;
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 32px clamp(20px, 6vw, 100px);
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+}
+.inv-footer-brand {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: .1em;
+  color: rgba(255,255,255,.3); text-transform: uppercase;
+}
+.inv-footer-links { display: flex; gap: 24px; }
+.inv-footer-links a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; letter-spacing: .08em;
+  color: rgba(255,255,255,.3); text-decoration: none;
+  transition: color .2s;
+}
+.inv-footer-links a:hover { color: rgba(212,175,55,.75); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 720px) {
+  .inv-metrics-inner { grid-template-columns: 1fr; }
+  .inv-metric { border-right: none; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .inv-metric:last-child { border-bottom: none; }
+  .inv-scenarios { grid-template-columns: 1fr; }
+  .inv-thesis-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body style="background:#020204;margin:0;padding:0;">
+
+<!-- ── NAV ── -->
+<nav class="inv-nav">
+  <a class="inv-nav-brand" href="index.html">
+    <img alt="XSEAT" class="inv-nav-logo" src="assets/logos/xseat.jpg"/>
+    <span class="inv-nav-label">Investor Overview</span>
+  </a>
+  <a class="inv-nav-back" href="index.html">Back to Main Site</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="inv-hero">
+  <div class="inv-hero-in">
+    <div class="inv-hero-tag">Confidential — For Qualified Investors</div>
+    <div class="inv-rule"></div>
+    <h1>THE NUMBERS<br/>ARE <span>STRUCTURAL.</span></h1>
+    <p class="inv-hero-sub">Texas PRIME is not a projection. It is a structural capture of demand that already exists, has nowhere to go, and has been waiting for exactly this infrastructure. 390+ venues. 13.5M sports fans. Zero new capital required.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <a href="#quantitative" class="btn btn-g" style="letter-spacing:.06em;text-decoration:none;">View Full Lock-Up</a>
+      <a href="mailto:invest@xseat.com" class="btn btn-o" style="letter-spacing:.06em;text-decoration:none;">Request Deck</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── KEY METRICS STRIP ── -->
+<div class="inv-metrics">
+  <div class="inv-metrics-inner">
+    <div class="inv-metric">
+      <span class="inv-metric-n">$375M</span>
+      <span class="inv-metric-l">Conservative Annual Revenue — Texas</span>
+    </div>
+    <div class="inv-metric">
+      <span class="inv-metric-n">$405M</span>
+      <span class="inv-metric-l">Growth Annual Revenue — Texas</span>
+    </div>
+    <div class="inv-metric">
+      <span class="inv-metric-n">390<sup style="font-size:.55em;vertical-align:super">+</sup></span>
+      <span class="inv-metric-l">Cinema Venues — Zero New Infrastructure</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── INVESTMENT THESIS ── -->
+<div class="inv-thesis">
+  <div class="inv-section" style="padding-bottom:0;">
+    <div class="inv-section-label">Why This Works</div>
+    <h2>THE INVESTMENT<br/><span>THESIS</span></h2>
+    <p class="inv-section-lede">Four structural conditions converge in Texas that do not replicate elsewhere at the same density or scale.</p>
+  </div>
+  <div class="inv-thesis-grid">
+    <div class="inv-thesis-card">
+      <span class="inv-thesis-num">01</span>
+      <div class="inv-thesis-title">Existing Infrastructure</div>
+      <p class="inv-thesis-body">390+ cinema venues across Texas. 674,000 seats already built, wired for audio and projection, with existing operational teams. No capital deployment required for the physical network. The venue layer is already live.</p>
+    </div>
+    <div class="inv-thesis-card">
+      <span class="inv-thesis-num">02</span>
+      <div class="inv-thesis-title">Unabsorbed Demand</div>
+      <p class="inv-thesis-body">Texas has no legal sports betting. No tolerated pick-em formats. Fantasy products don't resolve live moments. Bars cannot resolve outcomes collectively. 13.5M sports fans with disposable income and no structured participation channel.</p>
+    </div>
+    <div class="inv-thesis-card">
+      <span class="inv-thesis-num">03</span>
+      <div class="inv-thesis-title">Sport Density</div>
+      <p class="inv-thesis-body">Dallas Cowboys (NFL), NASCAR (36 races), PBR (20–30 events), UFC (6–10 nights). 70–80 high-demand PRIME dates per year — more than any comparable U.S. market. Frequency drives the revenue model.</p>
+    </div>
+    <div class="inv-thesis-card">
+      <span class="inv-thesis-num">04</span>
+      <div class="inv-thesis-title">Structural Capture</div>
+      <p class="inv-thesis-body">This is not an aspirational model dependent on behaviour change. Texas fans are already organising around live sport — in bars, in living rooms, in informal watch groups. S.E.A.T formalises existing behaviour into premium attendance.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── TEXAS BY THE NUMBERS ── -->
+<div class="inv-texas-bg">
+  <div class="inv-section" style="position:relative;z-index:2;">
+    <div class="inv-section-label">Texas — S.E.A.T Prime Focus</div>
+    <h2>WHERE THE<br/>MODEL STOPS<br/><span>BEING THEORY.</span></h2>
+    <div class="inv-rule"></div>
+    <p class="inv-section-lede">Texas is not chosen for population size. Texas is chosen because the assumptions the model depends on are already visible in daily behaviour — and because there is nowhere else for this demand to go.</p>
+    <blockquote class="inv-texas-quote">
+      "The gap between 'I would attend' and 'I have nowhere to go' is persistent across the state. What fills it today are bars, living rooms, and informal watch groups. None of those solve for timing, atmosphere, or collective resolution." — S.E.A.T Market Intelligence, Texas, 2025
+    </blockquote>
+    <div class="lbl lbl-gold" style="margin-bottom:24px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;color:rgba(212,175,55,.75);text-transform:uppercase;">Texas By the Numbers</div>
+    <div class="inv-tm-grid">
+      <div class="inv-tm-card">
+        <div class="inv-tm-n">30M</div>
+        <div class="inv-tm-l">Total Texas population — third largest sports market in the United States</div>
+      </div>
+      <div class="inv-tm-card">
+        <div class="inv-tm-n">13.5M<small style="font-size:14px;color:rgba(255,255,255,.3)">–14.6M</small></div>
+        <div class="inv-tm-l">Active sports fans — the addressable PRIME audience</div>
+      </div>
+      <div class="inv-tm-card">
+        <div class="inv-tm-n">9.2%</div>
+        <div class="inv-tm-l">PRIME conversion rate — vs 6–7% standard model, driven by IMPACT alignment and absence of competing participation channels</div>
+      </div>
+      <div class="inv-tm-card">
+        <div class="inv-tm-n">5.2×</div>
+        <div class="inv-tm-l">Events attended per fan per year — vs 3.0× standard model, driven by Cowboys + NASCAR full season + PBR repeats + UFC nights</div>
+      </div>
+      <div class="inv-tm-card">
+        <div class="inv-tm-n">390<sup style="font-size:.55em">+</sup></div>
+        <div class="inv-tm-l">Cinema venues in Texas — existing infrastructure, no capital required</div>
+      </div>
+      <div class="inv-tm-card">
+        <div class="inv-tm-n">70–80</div>
+        <div class="inv-tm-l">PRIME event dates per year across Cowboys, NASCAR, PBR and UFC</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── QUANTITATIVE LOCK-UP ── -->
+<div class="inv-numbers-bg" id="quantitative">
+  <div class="inv-section" style="position:relative;z-index:2;">
+    <div class="inv-section-label">Texas PRIME — Quantitative Lock-Up</div>
+    <h2>THE NUMBERS<br/>ARE <span>STRUCTURAL.</span></h2>
+    <div class="inv-rule"></div>
+    <p class="inv-section-lede">Texas PRIME outperforms the standard S.E.A.T model because the draw of the events and the participation structure align with existing behaviour. This is a structural capture of existing demand — not an aspirational uplift.</p>
+    <div class="inv-num-grid">
+      <div class="inv-ng">
+        <div class="inv-ng-n">13.5M</div>
+        <div class="inv-ng-l">Active sports fans in Texas</div>
+        <div class="inv-ng-note">Adult population: 22.5M · Conversion: 9.2%</div>
+      </div>
+      <div class="inv-ng">
+        <div class="inv-ng-n">6.46–6.98M</div>
+        <div class="inv-ng-l">Annual PRIME tickets — Texas</div>
+        <div class="inv-ng-note">1.24–1.34M ASFs × 5.2 events per year</div>
+      </div>
+      <div class="inv-ng">
+        <div class="inv-ng-n">$200</div>
+        <div class="inv-ng-l">Ticket price per PRIME event</div>
+        <div class="inv-ng-note">$58 net retained per ticket to S.E.A.T</div>
+      </div>
+      <div class="inv-ng">
+        <div class="inv-ng-n">70–80</div>
+        <div class="inv-ng-l">PRIME event dates per year in Texas</div>
+        <div class="inv-ng-note">Cowboys (8–9) + NASCAR (36) + PBR (20–25) + UFC (6–10)</div>
+      </div>
+      <div class="inv-ng">
+        <div class="inv-ng-n">12–15%</div>
+        <div class="inv-ng-l">Share of Texas cinema seats activated per PRIME night</div>
+        <div class="inv-ng-note">80,750–99,714 seats per event date (674K total)</div>
+      </div>
+      <div class="inv-ng">
+        <div class="inv-ng-n">390+</div>
+        <div class="inv-ng-l">Texas cinema venues — ready-built infrastructure</div>
+        <div class="inv-ng-note">No new capital. Existing projection and audio.</div>
+      </div>
+      <div class="inv-ng">
+        <div class="inv-ng-n">45–82%</div>
+        <div class="inv-ng-l">Venue utilisation range on PRIME nights</div>
+        <div class="inv-ng-note">36,000–82,000 seats filled — operational headroom maintained</div>
+      </div>
+      <div class="inv-ng">
+        <div class="inv-ng-n">5.2×</div>
+        <div class="inv-ng-l">Frequency per fan per year — Texas PRIME</div>
+        <div class="inv-ng-note">vs 3.0× standard S.E.A.T model</div>
+      </div>
+    </div>
+    <div class="inv-scenarios">
+      <div class="inv-scenario">
+        <div class="inv-scenario-tag">Conservative Scenario</div>
+        <div class="inv-scenario-rev">$375M</div>
+        <div class="inv-scenario-sub">6.46M annual tickets × $58 net retained = $375M annual revenue to S.E.A.T</div>
+      </div>
+      <div class="inv-scenario">
+        <div class="inv-scenario-tag">Growth Scenario</div>
+        <div class="inv-scenario-rev">$405M</div>
+        <div class="inv-scenario-sub">6.98M annual tickets × $58 net retained = $405M annual revenue to S.E.A.T</div>
+      </div>
+    </div>
+    <div style="margin-top:32px;padding:24px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(212,175,55,.12);border-radius:4px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;color:rgba(212,175,55,.65);text-transform:uppercase;margin-bottom:12px;">Scale Trajectory</div>
+      <p style="font-family:'Barlow',sans-serif;font-weight:300;font-size:14px;line-height:1.7;color:rgba(255,255,255,.5);margin:0;">Texas is the launch market. 390+ cinema venues. 674,000 seats. 13.5 million sports fans. Zero new infrastructure required. Once Texas is operational, the same stack extends to every major U.S. market. The infrastructure already exists. The audiences already exist. The only variable is the sequence of activation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<div class="inv-cta">
+  <div class="inv-section-label" style="color:rgba(212,175,55,.65);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;">Next Step</div>
+  <h2>THE ROOM<br/>IS <span>READY.</span></h2>
+  <p>Texas PRIME launches with zero new infrastructure and a structural demand pool that has been unserved since sport moved to broadcast. We are ready to discuss the investment opportunity.</p>
+  <div class="inv-cta-row">
+    <a class="inv-cta-email" href="mailto:invest@xseat.com">
+      <span>invest@xseat.com</span>
+      <span style="opacity:.5">→</span>
+    </a>
+    <a class="inv-cta-email" href="mailto:texas@xseat.com">
+      <span>texas@xseat.com</span>
+      <span style="opacity:.5">→</span>
+    </a>
+  </div>
+  <div style="margin-top:32px;">
+    <a href="index.html" style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.35);text-decoration:none;">← Return to main site</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="inv-footer">
+  <div class="inv-footer-brand">© 2025 XSEAT — S.E.A.T · Confidential</div>
+  <div class="inv-footer-links">
+    <a href="index.html">Main Site</a>
+    <a href="og-technology.html">0G Technology</a>
+    <a href="mailto:invest@xseat.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

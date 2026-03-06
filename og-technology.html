@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>0G Technology — The Engine Behind S.E.A.T | XSEAT</title>
+<meta content="0G is the proprietary technology infrastructure that powers S.E.A.T. Sub-2-second glass-to-glass delivery. Frame-accurate synchronisation. Fan participation at national scale." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&amp;family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/><link href="og-technology.css" rel="stylesheet"/>
+
+</head>
+<body>
+<!-- ── NAV ── -->
+<nav aria-label="0G Technology page navigation" id="nav" role="navigation">
+<a aria-label="Back to XSEAT" class="nav-brand" href="index.html">
+<span class="nav-wordmark">X<span>SEAT</span></span>
+<span class="nav-brand-sub">S.E.A.T<br/>Sports Entertainment At Theatre</span>
+</a>
+<a aria-label="Return to main site" class="nav-back" href="index.html">
+    Back to Main Site
+  </a>
+</nav>
+<!-- ══ HERO ══ -->
+<section aria-labelledby="og-h1" class="og-hero">
+<!-- Grid -->
+<div aria-hidden="true" class="og-hero-grid"></div>
+<!-- Pulsing rings -->
+<div aria-hidden="true" class="og-hero-ring"></div>
+<div aria-hidden="true" class="og-hero-ring"></div>
+<div aria-hidden="true" class="og-hero-ring"></div>
+<!-- Animated signal lines SVG -->
+<div aria-hidden="true" class="og-hero-signals">
+<svg fill="none" preserveaspectratio="xMidYMid slice" viewbox="0 0 1440 900">
+<defs>
+<lineargradient id="sigG" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#c8a84b" stop-opacity="0"></stop>
+<stop offset="50%" stop-color="#c8a84b" stop-opacity="0.6"></stop>
+<stop offset="100%" stop-color="#c8a84b" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="sigB" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#2060ff" stop-opacity="0"></stop>
+<stop offset="50%" stop-color="#2060ff" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#2060ff" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Radiating signal lines from centre -->
+<line stroke="url(#sigG)" stroke-width="1" x1="720" x2="100" y1="450" y2="150">
+<animate attributename="opacity" begin="0s" dur="3s" repeatcount="indefinite" values="0;0.8;0"></animate>
+</line>
+<line stroke="url(#sigG)" stroke-width="1" x1="720" x2="1340" y1="450" y2="150">
+<animate attributename="opacity" begin="0.5s" dur="3s" repeatcount="indefinite" values="0;0.8;0"></animate>
+</line>
+<line stroke="url(#sigB)" stroke-width="1" x1="720" x2="100" y1="450" y2="750">
+<animate attributename="opacity" begin="1s" dur="3s" repeatcount="indefinite" values="0;0.6;0"></animate>
+</line>
+<line stroke="url(#sigB)" stroke-width="1" x1="720" x2="1340" y1="450" y2="750">
+<animate attributename="opacity" begin="1.5s" dur="3s" repeatcount="indefinite" values="0;0.6;0"></animate>
+</line>
+<line stroke="url(#sigG)" stroke-width="1" x1="720" x2="720" y1="450" y2="50">
+<animate attributename="opacity" begin="0.3s" dur="2.5s" repeatcount="indefinite" values="0;0.7;0"></animate>
+</line>
+<line stroke="url(#sigB)" stroke-width="1" x1="720" x2="720" y1="450" y2="860">
+<animate attributename="opacity" begin="0.8s" dur="2.5s" repeatcount="indefinite" values="0;0.5;0"></animate>
+</line>
+<!-- Endpoint nodes -->
+<circle cx="100" cy="150" fill="#c8a84b" r="4">
+<animate attributename="opacity" dur="3s" repeatcount="indefinite" values="0.2;1;0.2"></animate>
+</circle>
+<circle cx="1340" cy="150" fill="#c8a84b" r="4">
+<animate attributename="opacity" begin="0.5s" dur="3s" repeatcount="indefinite" values="0.2;1;0.2"></animate>
+</circle>
+<circle cx="100" cy="750" fill="#2060ff" r="4">
+<animate attributename="opacity" begin="1s" dur="3s" repeatcount="indefinite" values="0.2;1;0.2"></animate>
+</circle>
+<circle cx="1340" cy="750" fill="#2060ff" r="4">
+<animate attributename="opacity" begin="1.5s" dur="3s" repeatcount="indefinite" values="0.2;1;0.2"></animate>
+</circle>
+</svg>
+</div>
+<div class="og-hero-c">
+<div aria-hidden="true" class="og-eyebrow">
+      SEAT-OSX  ·  @G ENGINE  ·  @G SDK  ·  INPLAY.live
+    </div>
+<h1 aria-label="Zero G Technology" class="og-h1" id="og-h1">0G</h1>
+<p class="og-h1-sub">
+      The Technology Behind<br/>
+      the <span class="ac">Experience</span>
+</p>
+<div aria-hidden="true" class="og-hero-rule"></div>
+<p class="og-hero-desc">
+      Proprietary. Patented. Proven at scale.<br/>
+      The invisible engine that synchronises sport across a national network.
+    </p>
+<!-- Stack strip -->
+<div class="og-hero-stack" role="list">
+<div class="ohs" role="listitem">
+<span class="ohs-n">Layer 01</span>
+<span class="ohs-t">SEAT-OSX</span>
+<span class="ohs-d">Signal ingestion &amp; distribution platform</span>
+</div>
+<div class="ohs" role="listitem">
+<span class="ohs-n">Layer 02</span>
+<span class="ohs-t">@G Engine</span>
+<span class="ohs-d">Rules engine &amp; participation orchestration</span>
+</div>
+<div class="ohs" role="listitem">
+<span class="ohs-n">Layer 03</span>
+<span class="ohs-t">@G SDK</span>
+<span class="ohs-d">Deployment framework &amp; venue integration</span>
+</div>
+<div class="ohs" role="listitem">
+<span class="ohs-n">Layer 04</span>
+<span class="ohs-t">INPLAY.live</span>
+<span class="ohs-d">FAN$INPLAY participation interface</span>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="og-scroll-cue">
+<span>Explore 0G</span>
+<div class="sc-line"></div>
+</div>
+</section>
+<!-- ── PROOF STRIP ── -->
+<div aria-label="0G technology proof points" class="og-proof" role="list">
+<div class="op-i" role="listitem"><div class="op-tick"></div><span>Sub-2s glass-to-glass delivery</span></div>
+<div class="op-i" role="listitem"><div class="op-tick"></div><span>Multiple patented systems</span></div>
+<div class="op-i" role="listitem"><div class="op-tick"></div><span>Network-independent sync</span></div>
+<div class="op-i" role="listitem"><div class="op-tick"></div><span>Verified at NBC/XFINITY Super Bowl</span></div>
+<div class="op-i" role="listitem"><div class="op-tick"></div><span>Zero load failure risk</span></div>
+</div>
+<main>
+<!-- ══ SECTION 1 — WHAT 0G IS ══ -->
+<section aria-labelledby="what-og-h" class="what-og" id="what-og">
+<div aria-hidden="true" class="what-og-ghost">0G</div>
+<div class="what-og-in">
+<div class="what-og-left">
+<div class="lbl rv">What 0G Is</div>
+<h2 class="rv d1" id="what-og-h">
+        NOT A PRODUCT.<br/>
+        A <span class="gold">TECHNOLOGY</span><br/>
+        CONDITION.
+      </h2>
+<div class="rule rv d2"></div>
+<p class="lede rv d2">
+        0G is the proprietary technology infrastructure that makes synchronised national attendance possible. It is not a brand name — it is the operational condition the platform operates within: zero-gap delivery, zero-latency participation, zero compromise on rights integrity.
+      </p>
+<p class="bc rv d3" style="margin-top:20px">
+        Engineered from a core layer of multiple patented technology systems, 0G delivers a network-independent synchronisation framework that enables fan participation at scale across unlimited connected devices — with no capacity ceiling and no connected load failure risk.
+      </p>
+<p class="bc rv d3" style="margin-top:16px">
+        Embedded as a native component system within global cinema platforms through long-established, exclusive partnerships at the advertising partner, core hardware manufacturer and software service provider level — structurally a closed market by design.
+      </p>
+</div>
+<div class="what-og-right">
+<div class="og-def-block rv d1" role="list">
+<div class="og-def-row accent" role="listitem">
+<span class="og-def-label">Core Capability</span>
+<span class="og-def-val">Sub-2-Second Glass-to-Glass</span>
+<span class="og-def-desc">Proven delivery from host production contribution-grade live feed to venues — 15× faster than a TV next to the live game.</span>
+</div>
+<div class="og-def-row" role="listitem">
+<span class="og-def-label">Synchronisation Model</span>
+<span class="og-def-val">Network-Independent</span>
+<span class="og-def-desc">Does not depend on internet infrastructure stability. Operates independently of venue network conditions to guarantee frame-accurate delivery.</span>
+</div>
+<div class="og-def-row" role="listitem">
+<span class="og-def-label">Participation</span>
+<span class="og-def-val">Zero-Latency at Scale</span>
+<span class="og-def-desc">Fan participation via mobile devices at national scale with no capacity or connected load failure risk across the full venue network.</span>
+</div>
+<div class="og-def-row" role="listitem">
+<span class="og-def-label">Market Position</span>
+<span class="og-def-val">Structurally Closed</span>
+<span class="og-def-desc">Embedded natively within global cinema platforms through exclusive long-established partnerships. Closed market by design — not by accident.</span>
+</div>
+<div class="og-def-row" role="listitem">
+<span class="og-def-label">IP Status</span>
+<span class="og-def-val">Multiple Patented Systems</span>
+<span class="og-def-desc">The technology layer is protected. The synchronisation system, participation framework and broadcast integration are all covered under registered IP.</span>
+</div>
+</div>
+<div class="og-metric-pair rv d2">
+<div class="og-metric">
+<span class="og-metric-n">&lt;2<span style="font-size:.5em;letter-spacing:-1px">s</span></span>
+<span class="og-metric-l">Glass-to-glass<br/>latency guaranteed</span>
+</div>
+<div class="og-metric">
+<span class="og-metric-n">15<span style="font-size:.5em;letter-spacing:-1px">×</span></span>
+<span class="og-metric-l">Faster than TV<br/>beside the live game</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ══ SECTION 2 — THE INFRASTRUCTURE LAYER ══ -->
+<section aria-labelledby="infra-h" class="infra" id="infra">
+<div aria-hidden="true" class="infra-grid-bg"></div>
+<div class="infra-in">
+<div class="lbl lbl-blue rv">The Infrastructure Layer</div>
+<h2 class="rv d1" id="infra-h">
+      SEAT-OSX.<br/>THE <span class="blue">PLATFORM</span><br/>BENEATH THE PLATFORM.
+    </h2>
+<div class="rule rule-b rv d2"></div>
+<p class="lede rv d2" style="max-width:720px">
+      SEAT-OSX is the operating system of the S.E.A.T network. It ingests the contribution-grade host production feed, layers the 0G distribution system, and delivers a synchronised signal to every venue endpoint simultaneously — with zero production overhead on the rights holder.
+    </p>
+<!-- Architecture diagram -->
+<div aria-label="SEAT-OSX system architecture" class="og-arch rv d2" role="img">
+<div class="og-arch-flow">
+<div class="og-an l-src">
+<span class="og-an-l">Event Source — Host Stadium</span>
+<span class="og-an-d">Contribution-grade live production feed via IMG Studios Hub</span>
+</div>
+<div class="og-conn"><div class="og-conn-line"></div></div>
+<div class="og-an l-seat">
+<span class="og-an-l">SEAT-OSX — Signal Layer</span>
+<span class="og-an-d">Ingestion, encoding and distribution. Zero overhead on broadcast</span>
+</div>
+<div class="og-conn"><div class="og-conn-line blue-line"></div></div>
+<div class="og-an l-cdn">
+<span class="og-an-l">CDN Distribution</span>
+<span class="og-an-d">Frame-accurate delivery to all venue endpoints simultaneously</span>
+</div>
+<div class="og-conn"><div class="og-conn-line teal-line"></div></div>
+<div class="og-an l-venue">
+<span class="og-an-l">Venue Network — 390+ Locations</span>
+<span class="og-an-d">Every screen. Same frame. Same moment. Dolby Atmos. 4K</span>
+</div>
+<div class="og-conn"><div class="og-conn-line blue-line"></div></div>
+<div class="og-an l-0g">
+<span class="og-an-l">0G — Rules &amp; Participation Engine</span>
+<span class="og-an-d">Orchestration · Integrity · Brand safety · Participation triggers</span>
+</div>
+<div class="og-conn"><div class="og-conn-line teal-line"></div></div>
+<div class="og-an l-fan">
+<span class="og-an-l">FAN$INPLAY — Participation Layer</span>
+<span class="og-an-d">Live engagement · Predictions · Leaderboards · Venue vs Venue</span>
+</div>
+<div class="og-conn"><div class="og-conn-line"></div></div>
+<div class="og-an l-dash">
+<span class="og-an-l">Platform Dashboard — Commercial Layer</span>
+<span class="og-an-d">Event controls · Real-time metrics · Sponsor management · Reporting</span>
+</div>
+</div>
+</div>
+<div class="infra-cols rv d2">
+<div class="infra-col">
+<div aria-hidden="true" class="infra-col-icon">
+<svg viewbox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+</div>
+<h4>Zero Production Overhead</h4>
+<p>The live signal remains unchanged. SEAT-OSX appends the S.E.A.T distribution layer to the standard broadcast feed. No modification to the host production. No alteration to the event. The rights holder carries zero additional production cost or responsibility.</p>
+</div>
+<div class="infra-col">
+<div aria-hidden="true" class="infra-col-icon">
+<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+</div>
+<h4>Broadcast-Isolated Architecture</h4>
+<p>SEAT-OSX operates outside broadcast viewing metrics, modelling and screen-based measurement frameworks. It is not a broadcast product. It does not appear in broadcast audience impressions — generating less than 0.002% of total global broadcast audience impact, contractually aligned to existing IMG commercial frameworks.</p>
+</div>
+<div class="infra-col">
+<div aria-hidden="true" class="infra-col-icon">
+<svg viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><path d="M8 21h8M12 17v4"></path></svg>
+</div>
+<h4>Native Cinema Integration</h4>
+<p>Embedded at the hardware and software level within global cinema infrastructure through long-established exclusive partnerships. No new physical installation is required. S.E.A.T activates on existing 4K projection systems and Dolby Atmos audio environments — venues onboard through a standardised integration process.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ══ SECTION 3 — SYNCHRONISED AUDIENCES ══ -->
+<section aria-labelledby="sync-h" class="sync-sec" id="synchronisation">
+<div class="sync-in">
+<div class="lbl lbl-teal rv">Synchronised Audiences</div>
+<h2 class="rv d1" id="sync-h">
+      ONE SIGNAL.<br/>
+<span class="teal">390+ VENUES.</span><br/>
+      ONE MOMENT.
+    </h2>
+<div class="rule rule-t rv d2"></div>
+<p class="lede rv d2" style="max-width:720px">
+      Every venue receives the same frame at the same moment. Not approximate. Not streamed with buffering variance. Synchronised — so fans in Houston and fans in Dallas share the identical live instant, experiencing the same goal, the same roar, the same participation window, simultaneously.
+    </p>
+<!-- Sync diagram -->
+<div aria-label="Synchronisation architecture showing signal from host stadium to 390+ venue network" class="sync-diagram rv d2" role="img">
+<div class="sync-source">
+<div class="sync-source-node">HOST STADIUM PRODUCTION FEED</div>
+</div>
+<div style="height:44px"></div>
+<div class="sync-signal-trunk"></div>
+<div class="sync-label-row">
+<div class="sync-label">SEAT-OSX · @G ENGINE · CDN DISTRIBUTION LAYER</div>
+</div>
+<div style="height:8px"></div>
+<div class="sync-signal-trunk" style="background:linear-gradient(rgba(0,212,200,0.4),rgba(32,96,255,0.3))"></div>
+<div style="height:20px"></div>
+<div aria-label="Active venue network" class="sync-venues" role="list">
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">Houston</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">Dallas</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">Austin</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">San Antonio</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">Fort Worth</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">El Paso</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">Arlington</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">Lubbock</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem">
+<div class="sync-venue-dot"></div>
+<div class="sync-venue-name">Corpus Christi</div>
+<span class="sync-venue-status">● LIVE</span>
+</div>
+<div class="sync-venue" role="listitem" style="border-color:rgba(200,168,75,0.2);background:rgba(200,168,75,0.04)">
+<div class="sync-venue-dot" style="background:var(--gold);box-shadow:0 0 8px rgba(200,168,75,0.5)"></div>
+<div class="sync-venue-name" style="color:rgba(200,168,75,0.7)">+380 Venues</div>
+<span class="sync-venue-status" style="color:rgba(200,168,75,0.4)">● ACTIVE</span>
+</div>
+</div>
+</div><!-- /sync-diagram -->
+<div class="sync-stats rv d2">
+<div class="sync-stat">
+<span class="sync-stat-n">&lt;2s</span>
+<span class="sync-stat-l">Glass-to-glass latency.<br/>Confirmed at Dolby 88 level during NBC/XFINITY Super Bowl validation.</span>
+</div>
+<div class="sync-stat">
+<span class="sync-stat-n">390<span style="font-size:.55em;letter-spacing:-1px">+</span></span>
+<span class="sync-stat-l">Texas cinema venues receiving the same frame simultaneously.<br/>674,000 seats. One synchronised network.</span>
+</div>
+<div class="sync-stat">
+<span class="sync-stat-n">0</span>
+<span class="sync-stat-l">Load failure risk.<br/>Network-independent architecture with no capacity ceiling across connected venues.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ══ SECTION 4 — FAN PARTICIPATION ENGINE ══ -->
+<section aria-labelledby="fpe-h" class="fpe" id="participation">
+<div aria-hidden="true" class="fpe-glow"></div>
+<div class="fpe-in">
+<div class="lbl lbl-teal rv">Fan Participation Engine</div>
+<h2 class="rv d1" id="fpe-h">
+      ATTENDANCE<br/>
+      BECOMES<br/>
+<span class="teal">PARTICIPATION.</span>
+</h2>
+<div class="rule rule-t rv d2"></div>
+<p class="lede rv d2" style="max-width:720px">
+      FAN$INPLAY is the participation layer built into the 0G stack. It converts the experience of attending live sport in a venue into structured, platform-powered engagement — operating in real time, at scale, across every venue in the network simultaneously.
+    </p>
+<div class="fpe-grid">
+<div class="fpe-left">
+<!-- FansInPlay mark -->
+<div class="fip-mark rv">FAN$INPLAY</div>
+<span class="fip-mark-sub rv d1">Fan Participation Platform — Powered by @G ENGINE</span>
+<div class="no-gamble rv d1">Not gambling · Not wagering · Structured fan participation</div>
+<div class="fpe-components rv d2" role="list">
+<div class="fpe-comp" role="listitem">
+<div aria-hidden="true" class="fpe-comp-icon">
+<svg viewbox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6v6l4 2"></path></svg>
+</div>
+<div>
+<span class="fpe-comp-title">Synchronised Prediction Windows</span>
+<span class="fpe-comp-desc">Operator-defined prediction moments triggered in sync with the live event. No wagering. No monetary exchange. Structured participation within defined rulesets — opened and closed at event level by the 0G rules engine.</span>
+</div>
+</div>
+<div class="fpe-comp" role="listitem">
+<div aria-hidden="true" class="fpe-comp-icon">
+<svg viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+</div>
+<div>
+<span class="fpe-comp-title">Venue vs Venue Competition</span>
+<span class="fpe-comp-desc">Each venue competes collectively against others in the network — building crowd identity, local rivalry and national community within a single event. Real-time leaderboards update across the entire network simultaneously.</span>
+</div>
+</div>
+<div class="fpe-comp" role="listitem">
+<div aria-hidden="true" class="fpe-comp-icon">
+<svg viewbox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"></path></svg>
+</div>
+<div>
+<span class="fpe-comp-title">Live Event Triggers</span>
+<span class="fpe-comp-desc">Real-time acknowledgement of key match events — scores, knockouts, race positions, half-time — synchronised across the entire venue network simultaneously. Crowd reactions coordinated by the 0G engine at frame-accurate precision.</span>
+</div>
+</div>
+<div class="fpe-comp" role="listitem">
+<div aria-hidden="true" class="fpe-comp-icon">
+<svg viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+</div>
+<div>
+<span class="fpe-comp-title">Operator-Configurable by Design</span>
+<span class="fpe-comp-desc">Every ruleset, prediction window and brand placement is operator-configurable at event level. Full moderation and brand safety by architecture — not by policy. Each event operates within a jurisdiction-aware moderation framework.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fpe-right rv d1">
+<div class="lbl lbl-blue" style="margin-bottom:16px">Technology Stack</div>
+<div class="fpe-stack" role="list">
+<div class="fpe-stack-row fs-1" role="listitem">
+<span class="fs-label">Live Event Feed</span>
+<span class="fs-tag">Source</span>
+</div>
+<div class="fpe-stack-conn"><div></div></div>
+<div class="fpe-stack-row fs-2" role="listitem">
+<span class="fs-label">SEAT-OSX</span>
+<span class="fs-tag">Distribution</span>
+</div>
+<div class="fpe-stack-conn"><div></div></div>
+<div class="fpe-stack-row fs-4" role="listitem">
+<span class="fs-label">@G Engine</span>
+<span class="fs-tag">Orchestration</span>
+</div>
+<div class="fpe-stack-conn"><div></div></div>
+<div class="fpe-stack-row fs-3" role="listitem">
+<span class="fs-label">@G SDK</span>
+<span class="fs-tag">Deployment</span>
+</div>
+<div class="fpe-stack-conn"><div></div></div>
+<div class="fpe-stack-row fs-5" role="listitem">
+<span class="fs-label">INPLAY.live — FAN$INPLAY</span>
+<span class="fs-tag">Participation</span>
+</div>
+</div>
+<div style="margin-top:36px; padding:28px; background:rgba(32,96,255,0.05); border:1px solid rgba(32,96,255,0.12)">
+<div class="lbl lbl-blue" style="margin-bottom:16px; font-size:9px">API-First Architecture</div>
+<ul class="coord-list" style="padding:0">
+<li>CDN-distributed live signal with synchronised venue endpoint delivery</li>
+<li>0G rules engine processing participation triggers at sub-second latency</li>
+<li>FAN$INPLAY application layer — native and in-venue interface options</li>
+<li>Platform dashboard — configurable, real-time, exportable</li>
+<li>API-first architecture for integration with club and league systems</li>
+<li>Redundant infrastructure with multi-region failover</li>
+</ul>
+</div>
+<div style="margin-top:20px; padding:28px; background:rgba(0,212,200,0.04); border:1px solid rgba(0,212,200,0.12)">
+<div class="lbl lbl-teal" style="margin-bottom:16px; font-size:9px">What 0G Enables</div>
+<ul class="coord-list" style="padding:0">
+<li>Low-latency synchronised triggers across the full venue network</li>
+<li>Venue-level orchestration — individual configuration within national events</li>
+<li>Participation rulesets defined and deployed at event level</li>
+<li>Integrity controls — prediction windows, moderation &amp; compliance guardrails</li>
+<li>Real-time metrics and post-event commercial performance reporting</li>
+<li>Brand safety enforcement by architecture, not policy</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ══ SECTION 5 — PLATFORM COORDINATION ══ -->
+<section aria-labelledby="coord-h" class="coord" id="coordination">
+<div class="coord-in">
+<div class="lbl lbl-blue rv">Platform Coordination Layer</div>
+<h2 class="rv d1" id="coord-h">
+      ORCHESTRATION.<br/>
+<span class="blue">INTEGRITY.</span><br/>
+      CONTROL.
+    </h2>
+<div class="rule rule-b rv d2"></div>
+<p class="lede rv d2" style="max-width:720px">
+      The 0G rules engine doesn't just deliver signal. It coordinates every parameter of every event — from sponsor placements to participation windows to moderation thresholds — across the entire venue network, simultaneously, without manual intervention.
+    </p>
+<div class="coord-grid rv d2">
+<div class="coord-card">
+<h4>Security &amp; Governance</h4>
+<ul class="coord-list">
+<li>Event-level controls — every parameter configurable per event</li>
+<li>Sponsor hierarchy preserved at network level without manual coordination</li>
+<li>Full auditability — every participation event logged and reportable</li>
+<li>Permission structure aligned to sport governance frameworks</li>
+<li>Jurisdiction-aware moderation built into the rules engine</li>
+<li>Data governance compliant with applicable international standards</li>
+</ul>
+</div>
+<div class="coord-card">
+<h4>Rights &amp; Broadcast Integrity</h4>
+<ul class="coord-list">
+<li>Operates alongside existing broadcast and sponsorship agreements without alteration</li>
+<li>The live signal is not repackaged, redistributed or altered</li>
+<li>SEAT-OSX sits outside broadcast viewing metrics entirely</li>
+<li>Territorial licensing governance enforced at network architecture level</li>
+<li>No competing brands appear in the same venue without explicit authorisation</li>
+<li>Commercial model preserves rights holder hierarchy at every layer</li>
+</ul>
+</div>
+<div class="coord-card">
+<h4>Commercial Performance Layer</h4>
+<ul class="coord-list">
+<li>Full event-level reporting generated before the night ends</li>
+<li>Real-time sponsor controls configurable mid-event if required</li>
+<li>Leaderboard resolution, badge awards, attendance logging — automated</li>
+<li>Post-event commercial and participation report delivered to operators</li>
+<li>Revenue participation framework returning incremental value to rights holders</li>
+<li>Platform dashboard: configurable, real-time, fully exportable</li>
+</ul>
+</div>
+<div class="coord-card">
+<h4>Venue Coordination</h4>
+<ul class="coord-list">
+<li>Individual venue configuration within nationally-coordinated events</li>
+<li>Match-day atmosphere management — pre-match, live, post-event phases</li>
+<li>Licensed bar integration, dedicated screen activation, staff guidance</li>
+<li>Standardised onboarding — no capital investment required from venues</li>
+<li>National brand association with co-promotion and marketing access</li>
+<li>Operational delivery model with post-event commercial reporting</li>
+</ul>
+</div>
+</div>
+<div class="coord-gov rv d2">
+<div class="cg-item">
+<span class="cg-n">01</span>
+<span class="cg-t">Verified at Scale</span>
+<span class="cg-d">Integration of SEAT-OSX with contribution-grade host production feed through IMG Studios confirmed during Dolby 88 Glass/Glass/Device validation at the NBC/XFINITY Super Bowl. Sub-3-second latency verified at 210% above required performance thresholds.</span>
+</div>
+<div class="cg-item">
+<span class="cg-n">02</span>
+<span class="cg-t">@G Engine Delivered</span>
+<span class="cg-d">IMG Studios has received a working implementation build of the @G ENGINE and @G SDK, including full deployment instructions. Technology validation via ongoing live demonstrations confirms the SEAT-OSX platform operating at event scale.</span>
+</div>
+<div class="cg-item">
+<span class="cg-n">03</span>
+<span class="cg-t">Texas Launch Ready</span>
+<span class="cg-d">Initial activation market confirmed. Texas deployment across UFC, PBR and NASCAR calendars. 390+ cinema venues. 674,000 seats. 13.5 million sports fans. Zero new infrastructure required at venue level.</span>
+</div>
+</div>
+<!-- Verification banner -->
+<div class="verified-banner rv d2">
+<div aria-hidden="true" class="vb-icon">
+<svg viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+</div>
+<div>
+<span class="vb-label">Live Validation Record</span>
+<p class="vb-text">
+<strong>Dolby 88 — NBC/XFINITY Super Bowl:</strong> SEAT-OSX encoder layering and stadium-to-device synchronisation verified at sub-three-second latency, confirmed by IMG Digital Operations at 210% of required performance threshold. The @G ENGINE and @G SDK have been delivered to IMG Studios with full deployment documentation. Live Event Integration confirmed: contribution-grade host production feeds delivered through IMG Studios Hub with SEAT-OSX layer operating without impacting broadcast partners.
+        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ══ SECTION 6 — WHY 0G MATTERS ══ -->
+<section aria-labelledby="why-h" class="why-og" id="why-0g">
+<div aria-hidden="true" class="why-og-glow"></div>
+<div class="why-og-in">
+<div class="lbl rv" style="justify-content:center">Why 0G Matters</div>
+<h2 class="rv d1" id="why-h" style="font-size:clamp(48px,6vw,90px)">
+      SPORT HAS A<br/>NEW <span class="gold">DIMENSION.</span>
+</h2>
+<div class="rule rv d2" style="margin:30px auto"></div>
+<p class="why-og-lede rv d2">
+      The problem has always been physical. 98% of American sports fans will not attend a single live event this season. Not for want of interest — for want of infrastructure. 0G is that infrastructure.
+    </p>
+<div class="why-og-principles rv d2">
+<p class="wop">The technology is <em>not theoretical</em>. It has been validated. It has been delivered. It operates at event scale.</p>
+<p class="wop">It operates within <em>existing rights frameworks</em> and alongside established broadcast agreements. <strong>Nothing has to change</strong> for this to work.</p>
+<p class="wop">It is built on <em>existing infrastructure</em>. 390+ cinema venues, already equipped. No capital investment required. Ready to activate.</p>
+<p class="wop">It is powered by <em>proprietary technology</em>. Multiple patented systems. A structurally closed market by design. Not replicable without the IP.</p>
+<p class="wop">It extends <em>physical attendance</em> — not broadcast reach. It sells seats, not screens. Every fan is <strong>in the room</strong>.</p>
+<p class="wop">It turns the <em>away game into a local event</em>. The touring show into a recurring fixture. The global final into a city-by-city moment. At scale.</p>
+</div>
+<h3 class="why-og-close rv d1" style="text-align:center">
+      THE NETWORK IS BUILT.<br/>
+      THE TECHNOLOGY IS LIVE.
+    </h3>
+<div class="why-og-ctas rv d2">
+<a class="btn btn-g" href="index.html">Return to XSEAT</a>
+<a class="btn btn-o" href="index.html#technology">View the Full Platform</a>
+<a class="btn btn-t" href="index.html#contact">Speak to the Team</a>
+</div>
+</div>
+</section>
+</main>
+<!-- ── FOOTER ── -->
+<footer class="og-footer" role="contentinfo">
+<div class="og-footer-brand">
+    X<span>SEAT</span> · 0G Technology
+  </div>
+<div class="og-footer-note">
+    S.E.A.T — Sports Entertainment At Theatre<br/>
+    Powered by SEAT-OSX · @G ENGINE · @G SDK · INPLAY.live
+  </div>
+<a class="og-footer-back" href="index.html">Back to XSEAT</a>
+</footer>
+
+<script src="og-technology.js"></script></body>
+</html>
